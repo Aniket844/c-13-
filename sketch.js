@@ -38,27 +38,29 @@ function draw() {
   createApples();
   createLeaves();
 }
+function createApples(){
+  apple = createSprite(random(50,350),40, 10, 10);
+  apple.addImage(appleImg)
+  apple.scale = 0.08
+  apple.velocityY=3
+  apple.lifetime = 140
+}
+function createLeaves(){
+  leaves = createSprite(random(50,350),40, 10, 10);
+  leaves.addImage(leafImg);
+  leaves.scale = 0.08;
+  leaves.velocityY = 3
+  leaves.lifetime = 140
+}
 
 
 
 var apple = Math.round(random(1,2));
 if (frameCount % 80 == 0){
   if (apple,leaves == 1){
-    function createApples(){
-      apple = createSprite(random(50,350),40, 10, 10);
-      apple.addImage(appleImg)
-      apple.scale = 0.08
-      apple.velocityY=10
-      apple.lifetime = 200
-    }}
-    else {
-      function createLeaves(){
-        leaves = createSprite(random(50,350),40, 10, 10);
-        leaves.addImage(leafImg);
-        leaves.scale = 0.08;
-        leaves.velocityY = 8
-        leaves.lifetime = 200
-      }
+    createApples();
+    }
+    else {createLeaves()
      
     }
   
